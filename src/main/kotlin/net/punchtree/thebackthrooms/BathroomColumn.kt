@@ -6,7 +6,7 @@ data class BathroomColumn(val bathroom: Bathroom,
                           val cells : Array<BathroomCell>,
                           var isWall: Boolean = false) {
 
-    var wallPositions = mutableListOf<WallPosition>()
+    var wallPositions = mutableSetOf<WallPosition>()
 
     fun adjacent(x: Int, y: Int, rotation: Direction = Direction.NORTH): BathroomColumn {
         return when (rotation) {

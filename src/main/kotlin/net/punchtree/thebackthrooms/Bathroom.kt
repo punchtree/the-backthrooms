@@ -30,9 +30,8 @@ data class Bathroom(val width: Int, val length: Int) {
         var x = 0
         var y = 0
 
-        // Start by finding the initial position. Start at the top left. Iterate to the right and down until we find a position
-        // that is air
-        // Because of iteration direction, we only ever need to check the right, down, and right-down cells
+        // Start by finding the initial position. Start at the top left. Iterate to the right and down until we find a
+        // position that is air
         var initialPosition = this[x, y]
         while (initialPosition.isWall) {
             if (x < width) {
@@ -46,7 +45,7 @@ data class Bathroom(val width: Int, val length: Int) {
 
         var currentPosition = initialPosition
         var currentRotation = Direction.NORTH
-        // We use the following algorithm to iterate through spots adjacent to the wall
+        // We use the following algorithm to iterate through spots adjacent to the wall:
         // If there is not a wall in front of us, rotate left and move right
         // Else, if there is not a wall to our right, move right
         // Else, rotate right
