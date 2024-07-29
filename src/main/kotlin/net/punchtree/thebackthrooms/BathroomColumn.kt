@@ -4,7 +4,8 @@ data class BathroomColumn(val bathroom: Bathroom,
                           val xBathroom: Int,
                           val yBathroom: Int,
                           val cells : Array<BathroomCell>,
-                          var isWall: Boolean = false) {
+                          var isWall: Boolean = false,
+                          var hasDoor: Boolean = false) {
 
     var wallPositions = mutableSetOf<WallPosition>()
 

@@ -20,4 +20,12 @@ enum class Direction {
             WEST -> NORTH
         }
     }
+    fun inverse(): Direction {
+        return when (this) {
+            NORTH -> SOUTH
+            WEST -> EAST
+            SOUTH -> NORTH
+            EAST -> WEST
+        }
+    }
 }
